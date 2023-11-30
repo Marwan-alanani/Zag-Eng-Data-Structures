@@ -50,7 +50,7 @@ public class DynamicArray {
     }
 
     private void checkIndex(int index) {
-        if (index < 0 || index > count) {
+        if (index < 0 || index >= count) {
             throw new IllegalArgumentException("Invalid index");
         }
     }
@@ -72,7 +72,7 @@ public class DynamicArray {
 
     public int max() {
         if (count == 0)
-            return -1;
+            throw new IllegalArgumentException("Invalid use of function");
         int max = items[0];
         for (int i = 1; i < count; i++) {
             if (items[i] > max)
@@ -83,7 +83,7 @@ public class DynamicArray {
     }
     public int min() {
         if (count == 0)
-            return -1;
+            throw new IllegalArgumentException("Invalid use of function");
         int min = items[0];
         for (int i = 1; i < count; i++) {
             if (items[i] < min)
