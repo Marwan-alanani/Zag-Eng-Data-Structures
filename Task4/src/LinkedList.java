@@ -37,6 +37,10 @@ public class LinkedList {
     }
 
     public void removeFirst() { // O(1)
+        if(head  == null)
+        {
+            return;
+        }
         if (head.next == null) {
             head = tail = null;
         } else {
@@ -48,6 +52,10 @@ public class LinkedList {
     }
 
     public void removeLast() {//O(n)
+        if(head  == null)
+        {
+            return;
+        }
         if (head.next == null) {
             head = tail = null;
         } else {
