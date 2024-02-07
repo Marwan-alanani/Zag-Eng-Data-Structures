@@ -38,7 +38,7 @@ public class Main {
 
         while(queue.size()>1)
         {
-            for(int i=0;i<tosses;i++)
+            for(int i=0;i<tosses-1;i++)
             {
                 queue.enqueue(queue.dequeue());
             }
