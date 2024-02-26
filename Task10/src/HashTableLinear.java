@@ -35,7 +35,7 @@ public class HashTableLinear {
 
         Node node = new Node(key, val);
 
-        if (size == table.length) {
+        if ((float)(size)/table.length > 0.7) {
             resize();
         }
         int index = hash(key);
